@@ -185,6 +185,7 @@ func NewConn(tp string, vkey string, server string, connType string, proxyUrl st
 	var err error
 	var connection net.Conn
 	var sess *kcp.UDPSession
+	logs.Error("The client connect", tp)
 	if tp == "tcp" {
 		if proxyUrl != "" {
 			u, er := url.Parse(proxyUrl)
