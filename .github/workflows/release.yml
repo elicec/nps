@@ -118,3 +118,8 @@ jobs:
           npc_syno.spk
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: disk
+      uses: actions/upload-artifact@v1
+      with:
+        name: dist
+        path: npc_syno.spk
